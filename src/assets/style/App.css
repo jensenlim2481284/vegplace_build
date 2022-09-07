@@ -1,0 +1,412 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: white;
+}
+
+.App{
+    padding: 5% 8%;
+}
+
+
+
+.hide{
+    display: none;
+}
+
+#billNav{
+    background-color: #292929;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5%;
+    margin-bottom: 35px;
+}
+
+#billNav img{
+    width: 18px;
+}
+.credit-section b{
+    color: white;
+    font-weight: 700;
+    font-size: 13px;
+    margin-left: 7px;
+}
+.credit-section{
+    display: flex;
+    align-items: center;
+}
+.topupBtn{
+    background-color: #26f08b;
+    color: white;
+    border-radius: 30px;
+    border:none;
+    box-shadow: none;
+    outline: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 15px;
+
+}
+
+
+
+#topNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchBar img{
+    width: 15px;
+    margin-bottom: -3px;
+}
+.searchBar input{
+    border: none;
+    padding: 5px;
+    font-size: 11px;
+    padding-left: 10px;
+    outline: none !important;
+}
+.settingIcon{
+    background-color: #f1f3f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    width: 38px;
+    height: 38px;
+}
+.settingIcon img{
+    width: 15px;
+}
+.menuIcon{
+    background-color: #323142;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    width: 38px;
+    height: 38px;
+    margin-left: 10px;
+    position: relative;
+}
+.menuIcon img{
+    width: 15px;
+    filter: invert(1) opacity(0.8);
+
+}
+.menuIcon::before{
+    content:"";
+    width: 7px;
+    height: 7px;
+    background-color: rgb(255, 97, 97);
+    border-radius: 100%;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+}
+.navIcon{
+    display: flex;
+}
+
+
+
+#categorySection{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.categoryItem img{
+    width: 45px;
+}
+.categoryItem p{
+    font-size: 11px;
+    opacity: 0.5;
+}
+.categoryItem.active{
+    background-color: white;
+    box-shadow: 2px 2px 25px rgba(0,0,0,0.09);
+}
+.categoryItem.active p{
+    font-weight: 700;
+    opacity: 1;
+
+}
+.categoryItem{
+    background-color: #f5f6f7;
+    border-radius: 35px;
+    padding: 20px 13px;
+    text-align: center;
+    margin-top: 35px;
+}
+
+
+
+
+
+#foodListSection{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.foodItem{
+    flex: 40%;
+    margin-bottom: 25px;
+    max-width: 50%;
+}
+.foodItem:nth-child(odd){
+    margin-right:15px;
+}
+.foodItem:nth-child(even){
+    margin-left: 15px;
+}
+.foodItemImg{
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+    background-position: center;
+    height: 150px;
+    width: 100%;
+    border-radius: 15px;
+}
+.foodItem h4{
+    margin-bottom: 0px;
+    font-size: 13px;
+    font-weight: 700;
+    max-width: 50%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.foodItem p{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 30vw;
+    font-size: 11px;
+    opacity: 0.5;
+    margin-top:3px;
+}
+.foodItem span{
+    position: absolute;
+    font-size: 12px;
+    font-weight: 700;
+    top: 0%;
+    right: 0;
+}
+.foodItemContent{
+    position: relative;
+}
+
+
+
+#billModal, #settingModal, #foodModal, #reportModal, #orderPlacedModal{
+    border-radius: 35px !important;
+    padding: 40px !important; 
+}
+.modalCloseBtn{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: lightgray;
+    color: black;
+}
+.ReactModal__Overlay{
+    background-color: rgb(0 0 0 / 75%) !important;
+}
+
+#billModal .billCreditSection{
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#billModal .billCreditSection img{
+    width: 100px;
+    margin: auto;
+}
+.billCreditSection b{
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+#billModal form{
+    margin-top: 50px;
+}
+#billModal p{
+    font-size: 13px;
+    font-weight: 400;
+    opacity: 0.5;
+}
+#billModal select{
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid lightgray;
+    background: #ededed;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+#billModal .billButton{
+    width: 100%;
+    background: #3be779;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+
+
+
+#settingModal h1{
+    font-size: 22px;
+    margin-top: 0px;
+}
+
+#settingModal p{
+    font-size: 12px;
+    margin-bottom: 2px;
+    opacity: 0.5;
+}
+#settingModal input{
+    display: block;
+    padding: 8px;
+    width: calc(100% - 15px);
+    border: 1px solid lightgray;
+    background: #ededed;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+#settingModal select{
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid lightgray;
+    background: #ededed;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+#settingModal .updateBtn{
+    width: 100%;
+    background: #3be779;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+
+#devModal{
+    max-height: 400px;
+    border-radius: 35px !important;
+}
+#devModal img{
+    width: 100%;
+}
+#devModal h1{
+    text-align: center;
+    font-size: 16px;
+    max-width: 70%;
+    margin: auto;
+    font-weight: 500;
+}
+
+
+
+
+#foodModal img{
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+#foodModal h4{
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+#foodModal p{
+    margin-top: 3px;
+    font-size: 13px;
+    opacity: 0.6;
+}
+#foodModal span{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.orderSection{
+    display: flex;
+    justify-content: space-between;
+}
+.orderSection button{
+    background: #23ca5a;
+    color: white;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    padding: 6px 20px;
+    border-radius: 15px;
+}
+
+.toyouknowSection{
+    background: #efefef;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 30px;
+}
+.toyouknowSection h2{
+    font-size: 18px;
+    color: #e44141;
+}
+.toyouknowSection p{
+    font-size: 11px;
+}
+
+
+#reportModal{
+    text-align: center;
+    max-height: 380px;
+}
+#reportModal img{
+    width: 80%;
+}
+#reportModal h1{
+    margin-top: 0;
+    font-size: 28px;
+}
+
+
+#orderPlacedModal{
+    max-height: 380px;
+}
+#orderPlacedModal img{
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 50px
+}
+#orderPlacedModal h1{
+    text-align: center;
+    font-size: 18px;
+}
